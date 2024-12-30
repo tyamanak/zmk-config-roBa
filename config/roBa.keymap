@@ -69,15 +69,6 @@
     };
 
     behaviors {
-        modm_F1_F2: modm_F1_F2 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MODM_F1_F2";
-            bindings = <&kp LS(LC(F1))>, <&kp LS(LC(F2))>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         arrow_left: arrow_left {
             compatible = "zmk,behavior-mod-morph";
             label = "ARROW_LEFT";
@@ -122,6 +113,51 @@
 
             tap-ms = <20>;
         };
+
+        modm_F2: modm_F2 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MODM_F2";
+            bindings = <&kp LS(LC(F2))>, <&kp LS(LC(F3))>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        modm_F4: modm_F4 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MODM_F4";
+            bindings = <&kp LS(LC(F4))>, <&kp LS(LC(F5))>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        modm_F6: modm_F6 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MODM_F6";
+            bindings = <&kp LS(LC(F6))>, <&kp LS(LC(F7))>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        modm_F8: modm_F8 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MODM_F8";
+            bindings = <&kp LS(LC(F8))>, <&kp LS(LC(F9))>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        modm_F10: modm_F10 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MODM_F10";
+            bindings = <&kp LS(LC(F10))>, <&kp LS(LC(F11))>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -158,10 +194,10 @@
 
         FN_APP {
             bindings = <
-&modm_F1_F2     &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &trans  &trans  &trans  &trans  &trans
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                          &trans
+&kp LC(LS(F1))   &modm_F2         &modm_F4  &modm_F6   &modm_F8                      &kp F1  &kp F2   &kp F3   &kp F4   &trans
+&kp LS(LC(F12))  &kp LS(LC(F13))  &none     &modm_F10  &none     &trans      &trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans
+&none            &none            &trans    &none      &none     &trans      &trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans
+&trans           &trans           &trans    &trans     &trans    &trans      &trans  &trans                             &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
