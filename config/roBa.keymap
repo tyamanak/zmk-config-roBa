@@ -49,6 +49,11 @@
             bindings = <&change_language>;
             key-positions = <18 19 20>;
         };
+
+        mute {
+            bindings = <&kp C_MUTE>;
+            key-positions = <16 28>;
+        };
     };
 
     macros {
@@ -158,6 +163,24 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        screenshot_cursor: screenshot_cursor {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SCREENSHOT_CURSOR";
+            bindings = <&kp LS(LG(NUMBER_4))>, <&kp LS(LG(NUMBER_6))>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        screenshot_area: screenshot_area {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SCREENSHOT_AREA";
+            bindings = <&kp LS(LG(N5))>, <&kp LS(LG(N7))>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -194,10 +217,10 @@
 
         FN_APP {
             bindings = <
-&kp LC(LS(F1))   &modm_F2         &modm_F4  &modm_F6   &modm_F8                      &kp F1  &kp F2   &kp F3   &kp F4   &trans
-&kp LS(LC(F12))  &kp LS(LC(F13))  &none     &modm_F10  &none     &trans      &trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans
-&none            &none            &trans    &none      &none     &trans      &trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans
-&trans           &trans           &trans    &trans     &trans    &trans      &trans  &trans                             &trans
+&kp LC(LS(F1))   &modm_F2         &modm_F4  &modm_F6   &modm_F8                                             &kp F1  &kp F2   &kp F3   &kp F4   &trans
+&kp LS(LC(F12))  &kp LS(LC(F13))  &none     &modm_F10  &none     &screenshot_cursor      &kp C_VOLUME_UP    &kp F5  &kp F6   &kp F7   &kp F8   &trans
+&none            &none            &trans    &none      &none     &screenshot_area        &kp C_VOLUME_DOWN  &kp F9  &kp F10  &kp F11  &kp F12  &trans
+&trans           &trans           &trans    &trans     &trans    &trans                  &trans             &trans                             &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
