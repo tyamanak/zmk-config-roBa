@@ -171,7 +171,7 @@
 &kp LEFT_CONTROL    &kp LEFT_ALT    &kp LEFT_COMMAND    &lt 1 SPACE  &lt 2 SPACE  &mo 3      &kp BACKSPACE  &lt 2 ENTER                                        &mo 3
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
         SYMBOL {
