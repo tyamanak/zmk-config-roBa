@@ -219,7 +219,7 @@
             bindings = <
 &kp LC(LS(F1))   &modm_F2         &modm_F4  &modm_F6   &modm_F8                                               &kp F1  &kp F2   &kp F3   &kp F4   &trans
 &kp LS(LC(F12))  &kp LS(LC(F13))  &none     &modm_F10  &none     &kp LS(LG(NUMBER_4))      &kp C_VOLUME_UP    &kp F5  &kp F6   &kp F7   &kp F8   &trans
-&none            &none            &trans    &none      &none     &screenshot_area          &kp C_VOLUME_DOWN  &kp F9  &kp F10  &kp F11  &kp F12  &trans
+&trans           &none            &trans    &none      &none     &screenshot_area          &kp C_VOLUME_DOWN  &kp F9  &kp F10  &kp F11  &kp F12  &trans
 &trans           &trans           &trans    &trans     &trans    &trans                    &trans             &trans                             &trans
             >;
 
