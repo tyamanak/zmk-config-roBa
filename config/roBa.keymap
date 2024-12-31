@@ -51,7 +51,7 @@
         };
 
         mute {
-            bindings = <&kp C_MUTE>;
+            bindings = <&lt 3 C_MUTE>;
             key-positions = <16 28>;
         };
     };
