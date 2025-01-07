@@ -86,6 +86,14 @@
 
             label = "ALT_TAB";
         };
+
+        mouse_key_press: mouse_key_press {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&mkp MB1>;
+
+            label = "MOUSE_KEY_PRESS";
+        };
     };
 
     behaviors {
