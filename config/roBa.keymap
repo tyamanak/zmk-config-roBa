@@ -222,7 +222,7 @@
 &kp LEFT_CONTROL    &kp LEFT_ALT    &kp LEFT_COMMAND    &lt 1 SPACE  &lt 2 SPACE  &lt 2 SPACE               &kp BACKSPACE  &lt 2 ENTER                                        &to 4
             >;
 
-            sensor-bindings = <&scroll_up_down SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&scroll_up_down SCRL_UP SCRL_DOWN>;
         };
 
         SYMBOL {
