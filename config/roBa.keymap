@@ -256,10 +256,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans    &trans    &trans                        &trans  &kp LG(LEFT_BRACKET)  &trans  &kp LG(RIGHT_BRACKET)  &trans
-&trans  &trans  &mkp MB5  &mkp MB3  &mkp MB4  &trans      &trans  &trans  &mkp MB1              &mo 5   &mkp MB2               &to 0
-&trans  &trans  &trans    &trans    &trans    &trans      &trans  &trans  &trans                &trans  &trans                 &trans
-&trans  &trans  &trans    &trans    &trans    &trans      &trans  &trans                                                       &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &kp LG(LEFT_BRACKET)  &trans  &kp LG(RIGHT_BRACKET)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1              &mo 5   &mkp MB2               &to 0
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans                &trans  &trans                 &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                       &trans
             >;
 
             sensor-bindings = <&scroll_up_down SCRL_UP SCRL_DOWN>;
