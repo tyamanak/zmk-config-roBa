@@ -116,6 +116,19 @@
 
             label = "MACRO_LEFT_CLICK";
         };
+
+        ALT_TAB: ALT_TAB {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_wait_time 30>,
+                <&macro_tap>,
+                <&kp TAB>;
+
+            label = "ALT_TAB";
+        };
     };
 
     behaviors {
@@ -251,7 +264,7 @@
 
         SYMBOL {
             bindings = <
-&kp ESCAPE  &alt_tab           &kp F11  &kp LC(UP_ARROW)  &none                       &kp PIPE   &kp BACKSLASH      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL
+&kp ESCAPE  &ALT_TAB           &kp F11  &kp LC(UP_ARROW)  &none                       &kp PIPE   &kp BACKSLASH      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL
 &kp TAB     &kp LC(LS(EQUAL))  &none    &none             &none   &none       &none   &kp TILDE  &kp DOUBLE_QUOTES  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SEMICOLON
 &trans      &trans             &trans   &trans            &trans  &none       &none   &kp GRAVE  &kp SQT            &kp LEFT_BRACE        &kp RIGHT_BRACE        &mt RIGHT_SHIFT COLON
 &trans      &trans             &trans   &trans            &trans  &trans      &trans  &trans                                                                     &trans
