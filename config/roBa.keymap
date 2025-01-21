@@ -117,12 +117,12 @@
             label = "MACRO_LEFT_CLICK";
         };
 
-        BT_TO_00: BT_TO_01 {
+        BT_TO_00: BT_TO_00 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap>, <&bt BT_SEL 0>, <&macro_tap>, <&to 0>;
 
-            label = "BT_TO_01";
+            label = "BT_TO_00";
         };
 
         BT_TO_01: BT_TO_01 {
