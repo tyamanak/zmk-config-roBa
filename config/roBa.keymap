@@ -112,7 +112,7 @@
                 <&macro_release>,
                 <&mkp LCLK>,
                 <&macro_tap>,
-                <&tog_off 4 &sl 4>;
+                <&tog_off 5 &sl 5>;
 
             label = "MACRO_LEFT_CLICK";
         };
@@ -272,16 +272,25 @@
 &kp LC(LS(F1))   &modm_F2         &modm_F4  &modm_F6   &modm_F8                                           &kp F1  &kp F2   &kp F3   &kp F4   &trans
 &kp LS(LC(F12))  &kp LS(LC(F13))  &none     &modm_F10  &none     &trans                &kp C_VOLUME_UP    &kp F5  &kp F6   &kp F7   &kp F8   &trans
 &trans           &none            &trans    &none      &none     &screenshot_area      &kp C_VOLUME_DOWN  &kp F9  &kp F10  &kp F11  &kp F12  &trans
-&trans           &trans           &trans    &trans     &trans    &trans                &trans             &trans                             &trans
+&trans           &trans           &trans    &trans     &trans    &trans                &trans             &trans                             &to 7
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
+            sensor-bindings = <&scroll_up_down SCRL_UP SCRL_DOWN>;
         };
 
         MOUSE {
             bindings = <
+&trans  &trans  &trans  &trans  &trans                           &trans  &trans    &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans  &mkp MB1  &mo 6   &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &bootloader  &trans  &trans    &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans                              &trans
+            >;
+        };
+
+        MOUSE_AUTO {
+            bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans             &trans  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &macro_left_click  &mo 5   &mkp MB2  &to 0
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &macro_left_click  &mo 6   &mkp MB2  &to 0
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans             &trans  &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                       &trans
             >;
@@ -298,12 +307,12 @@
             >;
         };
 
-        layer_6 {
+        BLUETOOTH {
             bindings = <
-&trans  &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &tog 0
+&trans  &trans  &trans  &trans  &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans                                                  &to 0
             >;
         };
     };
