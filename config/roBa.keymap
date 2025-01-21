@@ -116,6 +116,22 @@
 
             label = "MACRO_LEFT_CLICK";
         };
+
+        BT_TO_00: BT_TO_01 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&bt BT_SEL 0>, <&macro_tap>, <&to 0>;
+
+            label = "BT_TO_01";
+        };
+
+        BT_TO_01: BT_TO_01 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&bt BT_SEL 1>, <&macro_tap>, <&to 0>;
+
+            label = "BT_TO_01";
+        };
     };
 
     behaviors {
@@ -309,10 +325,10 @@
 
         BLUETOOTH {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans                                                  &to 0
+&trans  &trans  &trans  &trans  &trans                           &BT_TO_00  &BT_TO_01  &bt BT_SEL 2  &bt BT_SEL 3  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans     &trans     &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &bootloader  &trans     &trans     &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans                                            &to 0
             >;
         };
     };
