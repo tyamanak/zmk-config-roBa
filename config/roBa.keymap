@@ -112,7 +112,7 @@
                 <&macro_release>,
                 <&mkp LCLK>,
                 <&macro_tap>,
-                <&tog_off 5 &sl 5>;
+                <&tog_off 4 &sl 4>;
 
             label = "MACRO_LEFT_CLICK";
         };
@@ -242,8 +242,8 @@
             bindings = <
 &kp Q               &kp W           &kp E               &kp R        &kp T                                                 &kp Y        &kp U        &kp I      &kp O         &kp P
 &mt LEFT_CONTROL A  &kp S           &kp D               &kp F        &kp G        &kp LS(LG(NUMBER_4))      &none          &arrow_left  &arrow_down  &arrow_up  &arrow_right  &kp MINUS
-&mt LEFT_SHIFT Z    &mt LEFT_ALT X  &mt LEFT_COMMAND C  &kp V        &kp B        &mo 4                     &none          &kp N        &kp M        &kp COMMA  &kp DOT       &mt RIGHT_SHIFT SLASH
-&kp LEFT_CONTROL    &kp LEFT_ALT    &kp LEFT_COMMAND    &lt 1 SPACE  &lt 2 SPACE  &mo 4                     &kp BACKSPACE  &lt 2 ENTER                                        &mo 3
+&mt LEFT_SHIFT Z    &mt LEFT_ALT X  &mt LEFT_COMMAND C  &kp V        &kp B        &mo 6                     &none          &kp N        &kp M        &kp COMMA  &kp DOT       &mt RIGHT_SHIFT SLASH
+&kp LEFT_CONTROL    &kp LEFT_ALT    &kp LEFT_COMMAND    &lt 1 SPACE  &lt 2 SPACE  &mo 6                     &kp BACKSPACE  &lt 2 ENTER                                        &mo 3
             >;
 
             sensor-bindings = <&scroll_up_down SCRL_UP SCRL_DOWN>;
@@ -278,19 +278,10 @@
             sensor-bindings = <&scroll_up_down SCRL_UP SCRL_DOWN>;
         };
 
-        MOUSE {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                           &trans  &trans    &trans  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans  &mkp MB1  &mo 6   &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &bootloader  &trans  &trans    &trans  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans                              &trans
-            >;
-        };
-
         MOUSE_AUTO {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans             &trans  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &macro_left_click  &mo 6   &mkp MB2  &to 0
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &macro_left_click  &mo 5   &mkp MB2  &to 0
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans             &trans  &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                       &trans
             >;
@@ -304,6 +295,15 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
+        };
+
+        MOUSE {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                           &trans  &trans    &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans  &mkp MB1  &mo 5   &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &bootloader  &trans  &trans    &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans                              &trans
             >;
         };
 
