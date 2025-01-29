@@ -21,7 +21,7 @@
     flavor = "balanced";
 };
 
-&sl { release-after-ms = <300>; };
+&sl { release-after-ms = <150>; };
 
 / {
     combos {
